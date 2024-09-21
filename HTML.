@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche de notes</title>
+    <script src="Fichedenote.js"></script>
+    <style>
+        legend {
+            color: rgb(242, 41, 195);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Fiche de notes</legend>
+            <table border="1" width="50%" cellpadding="3">
+                <tr>
+                    <th>Module</th>
+                    <th>Moyenne</th>
+                    <th>Coefficient</th>
+                </tr>
+                <tr>
+                    <td>Technologie Web</td>
+                    <td><input type="number" id="moyenne1" min="0" max="20" step="0.01"></td>
+                    <td>
+                        <input type="radio" name="coefficient1" value="1">1
+                        <input type="radio" name="coefficient1" value="2">2
+                        <input type="radio" name="coefficient1" value="3">3
+                    </td>
+                </tr>
+                <tr>
+                    <td>Système logique</td>
+                    <td><input type="number" id="moyenne2" min="0" max="20" step="0.01"></td>
+                    <td>
+                        <input type="radio" name="coefficient2" value="1">1
+                        <input type="radio" name="coefficient2" value="2">2
+                        <input type="radio" name="coefficient2" value="3">3
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button type="button" onclick="calcul()">Moyenne Générale</button>
+            <input type="text" id="moyenneGenerale" readonly size="5">
+            <span id="mention"></span>
+        </fieldset>
+    </form>
+</body>
+</html>
